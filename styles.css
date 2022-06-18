@@ -1,6 +1,7 @@
 body {
     padding: 0px;
     margin: 0px;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .container {
@@ -20,6 +21,8 @@ body {
     grid-template-columns: 100%;
     grid-template-rows: 1fr 10fr 20fr;
     gap: 40px;
+    box-shadow: 1px 1px gray;
+    z-index: 2;
 }
 
 .header {
@@ -47,5 +50,66 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(auto-fill,minmax(20px,40px));
+}
+
+.header {
+    display: grid;
+    box-shadow: 1px 1px 2px lavender;
+    z-index: 2;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    padding-left: 20px;
+    align-items: center;
+}
+
+#search {
+    border-radius: 10px;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: lightgray;
+    height: 20px;
+}
+
+.button-group {
+    grid-area: 2/2/3/3;
+}
+
+img {
+    border-radius: 50%;
+    height: 100px;
+    grid-area: 1/1/2/2;
+}
+
+.img-prof {
+    border-radius: 50%;
+    height: 30px;
+}
+
+.user {
+    grid-area: 2/1/3/2;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr;
+    gap: 15px;
+    align-items: center;
+}
+
+#greeting {
+    grid-area: 1/2/2/3;
+    align-self:flex-end;
+}
+
+#hi {
+    grid-area: 1/2/2/3;
+    align-self: flex-start;
+}
+
+.profile {
+    grid-area: 1/2/2/3;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-flow: unset;
 }
 
