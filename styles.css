@@ -1,13 +1,13 @@
 body {
     padding: 0px;
     margin: 0px;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
     display: grid;
-    grid-template-columns: minmax(100px,1fr) minmax(200px,5fr);
-    grid-template-rows: 1fr 4fr;
+    grid-template-columns: minmax(180px,1fr) minmax(200px,5fr);
+    grid-template-rows: 1fr 6fr;
 }
 
 .sidebar{
@@ -18,7 +18,7 @@ body {
     color: white;
     font-weight: 600;
     padding-left: 15px;
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
     grid-template-rows: 80px 300px 200px;
     gap: 40px;
     box-shadow: 1px 1px gray;
@@ -33,11 +33,12 @@ body {
 
 .side {
     order: solid black;
+    grid-column: 2/3;
 }
 
-.brand {
+.brand-name {
     font-size: 1.3rem;
-    margin-top: 20px;
+    grid-column: 2/3;
 }
 
 .main {
@@ -50,10 +51,13 @@ body {
     grid-template-rows: 1fr 1fr;
 }
 
-.navigation, .settings {
+.navigation, .settings, .brand {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 6fr;
     grid-template-rows: repeat(auto-fill,minmax(20px,40px));
+    gap: 5px;
+    align-items: center;
+    margin-top: 10px;
 }
 
 .header {
@@ -78,6 +82,11 @@ body {
 
 .button-group {
     grid-area: 2/2/3/3;
+    display: grid;
+    gap:10px;
+    grid-template-columns: repeat(auto-fit,minmax(80px,1fr));
+    justify-items: flex-end;
+    padding: 5px;
 }
 
 img {
@@ -89,6 +98,8 @@ img {
 .img-prof {
     border-radius: 50%;
     height: 30px;
+    margin-left: 30%;
+    margin-bottom: 15%;
 }
 
 .user {
@@ -115,7 +126,8 @@ img {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-auto-flow: unset;
-    align-items: flex-end;
+    align-items: center;
+    justify-items: flex-end;
 }
 
 .projects {
@@ -188,4 +200,23 @@ p {
 .trending-user {
     grid-area: 2/2/3/3;
     align-self: flex-start;
+}
+
+button {
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    background-color:rgb(42, 137, 226);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 80px;
+    box-shadow: 1px 1px 2px 1px lightgray;
+    font-weight: 600;
+}
+
+.side-icon {
+    height: 1.3rem;
+    grid-column: 1/2;
+    grid-row: auto;
 }
